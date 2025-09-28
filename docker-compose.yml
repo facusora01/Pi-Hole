@@ -1,0 +1,26 @@
+services:
+  pihole:
+    container_name: ${CONTAINER_NAME:-pihole}
+    image: ${PIHOLE_IMAGE:-pihole/pihole:latest}
+    ports:
+      - "${DNS_PORT:-53}:53/tcp"
+      - "${DNS_PORT:-53}:53/udp"
+      - "${WEB_PORT:-8080}:80/tcp"
+
+    environment:
+      TZ: ${TZ:-America/Argentina/Buenos_Aires}
+      WEBPASSWORD: ${PIHOLE_WEBPASSWORD}
+      ServerIP: ${PIHOLE_SERVER_IP}
+      PIHOLE_DOMAIN: ${PIHOLE_DOMAIN:-pi.hole}
+      WEBTHEME: ${WEBTHEME:-default-dark}
+    volumes:
+      - ./etc-pihole/:/etc/pihole/
+      - ./etc-dnsmasq.d/:/etc/dnsmasq.d/
+      - ./scripts/auto-init-pihole.sh:/usr/local/bin/auto-init-pihole.sh:ro
+    cap_add:
+      - NET_ADMIN
+    dns:
+      - 127.0.0.1
+      - ${UPSTREAM_DNS1:-1.1.1.1}
+      - ${UPSTREAM_DNS2:-8.8.8.8}
+    restart: unless-stopped

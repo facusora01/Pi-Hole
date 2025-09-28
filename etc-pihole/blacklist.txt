@@ -1,0 +1,316 @@
+# Domain blacklist for Pi-hole
+# Format: domain [# optional comment]
+# Lines starting with # are comments and are ignored
+# Empty lines are also ignored
+# 
+# IMPORTANT: These domains will be BLOCKED (return 0.0.0.0)
+# To allow domains, use whitelist.txt instead
+
+# === ADVERTISING AND TRACKING ===
+doubleclick.net # Google DoubleClick advertising
+googleadservices.com # Google Ads
+googlesyndication.com # Google AdSense
+googletagmanager.com # Google Tag Manager tracking
+
+# === SOCIAL MEDIA (optional) ===
+# facebook.com # Facebook (uncomment to block)
+# instagram.com # Instagram (uncomment to block)
+# twitter.com # Twitter (uncomment to block)
+# tiktok.com # TikTok (uncomment to block)
+
+# === MALICIOUS OR UNWANTED SITES ===
+# malware.example.com # Example malicious site
+# phishing.example.com # Example phishing site
+
+# === DISTRACTORS (optional) ===
+# reddit.com # Reddit (descomenta para bloquear)
+# 9gag.com # 9GAG (descomenta para bloquear)
+
+# === TEMPORARY BLOCKING TEST ===
+# youtube.com # YouTube - DESHABILITADO PARA USO NORMAL
+# www.youtube.com # YouTube con www - DESHABILITADO PARA USO NORMAL
+# m.youtube.com # YouTube móvil - DESHABILITADO PARA USO NORMAL
+
+# === TRACKING AND ANALYTICS ===
+google-analytics.com # Google Analytics
+googletagservices.com # Google Tag Services
+scorecardresearch.com # ComScore tracking
+quantserve.com # Quantcast tracking
+
+# === ADDITIONAL ADS THAT EVADE BLOCKING ===
+# Redes publicitarias agresivas
+outbrain.com # Contenido promocionado "Más para ti"
+taboola.com # Widget de contenido patrocinado
+revcontent.com # Contenido nativo patrocinado
+content.ad # Anuncios nativos
+mgid.com # Contenido recomendado patrocinado
+
+# === DOMAINS DETECTED IN BROWSING (from JSON) ===
+# Amazon Ads (no bloqueados)
+adtago.s3.amazonaws.com # Amazon Ad Tago
+advice-ads.s3.amazonaws.com # Amazon Advice Ads
+analytics.s3.amazonaws.com # Amazon Analytics
+analyticsengine.s3.amazonaws.com # Amazon Analytics Engine
+
+# Google Ads avanzados (detectados)
+pagead2.googlesyndication.com # Google AdSense 2
+pagead2.googleadservices.com # Google Ad Services 2
+adservice.google.com # Google Ad Service
+afs.googlesyndication.com # Google Ad Framework
+
+# Doubleclick adicionales
+stats.g.doubleclick.net # Doubleclick Stats
+m.doubleclick.net # Doubleclick Mobile
+mediavisor.doubleclick.net # Doubleclick Media Advisor
+ad.doubleclick.net # Doubleclick Main Ad Server
+static.doubleclick.net # Doubleclick Static Resources
+
+# Adcolony (anuncios móviles)
+ads30.adcolony.com # Adcolony Mobile Ads
+adc3-launch.adcolony.com # Adcolony Launcher
+wd.adcolony.com # Adcolony Watchdog
+events3alt.adcolony.com # Adcolony Events
+
+# Media.net
+static.media.net # Media.net Static
+media.net # Media.net Main
+
+# Google Analytics avanzado
+ssl.google-analytics.com # Google Analytics SSL
+analytics.google.com # Google Analytics Main
+click.googleanalytics.com # Google Analytics Click Tracking
+
+# Hotjar (tracking de comportamiento)
+insights.hotjar.com # Hotjar Insights
+surveys.hotjar.com # Hotjar Surveys
+script.hotjar.com # Hotjar Scripts
+adm.hotjar.com # Hotjar Admin
+identify.hotjar.com # Hotjar Identity
+careers.hotjar.com # Hotjar Careers
+
+# MouseFlow (tracking de mouse)
+cdn.mouseflow.com # MouseFlow CDN
+tools.mouseflow.com # MouseFlow Tools
+o2.mouseflow.com # MouseFlow O2
+cdn-test.mouseflow.com # MouseFlow Test CDN
+mouseflow.com # MouseFlow Main
+
+# FreshWorks Marketing
+fwtracks.freshmarketer.com # FreshWorks Tracking
+freshmarketer.com # FreshWorks Main
+claritybt.freshmarketer.com # FreshWorks Clarity
+
+# Lucky Orange (analytics)
+upload.luckyorange.net # Lucky Orange Upload
+cs.luckyorange.net # Lucky Orange Customer Service
+settings.luckyorange.net # Lucky Orange Settings
+realtime.luckyorange.com # Lucky Orange Realtime
+api.luckyorange.com # Lucky Orange API
+luckyorange.com # Lucky Orange Main
+cdn.luckyorange.com # Lucky Orange CDN
+w1.luckyorange.com # Lucky Orange W1
+
+# Error Trackers
+sessions.bugsnag.com # Bugsnag Sessions
+notify.bugsnag.com # Bugsnag Notifications
+api.bugsnag.com # Bugsnag API
+app.bugsnag.com # Bugsnag App
+browser.sentry-cdn.com # Sentry Browser CDN
+app.getsentry.com # Sentry App
+
+# Social Media Tracking
+pixel.facebook.com # Facebook Pixel (ya estaba)
+an.facebook.com # Facebook AN
+static.ads-twitter.com # Twitter Static Ads
+ads-api.twitter.com # Twitter Ads API
+analytics.pointdrive.linkedin.com # LinkedIn Analytics
+ads.linkedin.com # LinkedIn Ads
+log.pinterest.com # Pinterest Logs
+analytics.pinterest.com # Pinterest Analytics
+ads.pinterest.com # Pinterest Ads
+trk.pinterest.com # Pinterest Tracking
+events.reddit.com # Reddit Events
+events.redditmedia.com # Reddit Media Events
+ads.youtube.com # YouTube Ads
+
+# TikTok Tracking
+analytics.tiktok.com # TikTok Analytics
+analytics-sg.tiktok.com # TikTok Analytics Singapore
+log.byteoversea.com # ByteDance Overseas Logs
+business-api.tiktok.com # TikTok Business API
+ads.tiktok.com # TikTok Ads
+ads-sg.tiktok.com # TikTok Ads Singapore
+ads-api.tiktok.com # TikTok Ads API
+
+# Yahoo Mix
+analytics.query.yahoo.com # Yahoo Query Analytics
+geo.yahoo.com # Yahoo Geo
+gemini.yahoo.com # Yahoo Gemini (ya bloqueado pero confirmar)
+ads.yahoo.com # Yahoo Ads
+log.fc.yahoo.com # Yahoo FC Logs
+
+# Yandex
+adfstat.yandex.ru # Yandex Ad Stats
+adfox.yandex.ru # Yandex AdFox
+appmetrica.yandex.ru # Yandex AppMetrica
+metrika.yandex.ru # Yandex Metrika
+
+# Unity Ads
+auction.unityads.unity3d.com # Unity Ads Auction
+adserver.unityads.unity3d.com # Unity Ad Server
+config.unityads.unity3d.com # Unity Ads Config
+webview.unityads.unity3d.com # Unity Ads WebView
+
+# OEM Tracking (fabricantes de móviles)
+bdapi-ads.realmemobile.com # Realme Ads
+iot-eu-logser.realme.com # Realme IoT Europe
+bdapi-in-ads.realmemobile.com # Realme India Ads
+iot-logser.realme.com # Realme IoT Logger
+
+# Xiaomi
+api.ad.xiaomi.com # Xiaomi Ad API
+tracking.rus.miui.com # Xiaomi Russia Tracking
+sdkconfig.ad.intl.xiaomi.com # Xiaomi International SDK
+sdkconfig.ad.xiaomi.com # Xiaomi SDK Config
+data.mistat.rus.xiaomi.com # Xiaomi Russia Stats
+data.mistat.india.xiaomi.com # Xiaomi India Stats
+
+# Oppo
+adx.ads.oppomobile.com # Oppo Ad Exchange
+data.ads.oppomobile.com # Oppo Ad Data
+ck.ads.oppomobile.com # Oppo Ad Click
+
+# Huawei
+metrics2.data.hicloud.com # Huawei Metrics 2
+grs.hicloud.com # Huawei GRS
+logbak.hicloud.com # Huawei Log Backup
+logservice.hicloud.com # Huawei Log Service
+logservice1.hicloud.com # Huawei Log Service 1
+metrics.data.hicloud.com # Huawei Metrics
+
+# Samsung
+smetrics.samsung.com # Samsung Metrics
+samsung-com.112.2o7.net # Samsung Analytics
+analytics-api.samsunghealthcn.com # Samsung Health China
+samsungads.com # Samsung Ads
+
+# Apple
+iadsdk.apple.com # Apple iAd SDK
+metrics.mzstatic.com # Apple MZStatic Metrics
+notes-analytics-events.apple.com # Apple Notes Analytics
+api-adservices.apple.com # Apple Ad Services
+weather-analytics-events.apple.com # Apple Weather Analytics
+books-analytics-events.apple.com # Apple Books Analytics
+
+# Microsoft/Bing Ads
+ads.msn.com # MSN Ads
+bat.bing.com # Bing Ads Tracking
+c.bing.com # Bing Click Tracking
+sb.scorecardresearch.com # Microsoft Analytics
+
+# Amazon Ads
+amazon-adsystem.com # Amazon DSP
+amazoncloudsearch.com # Amazon Ad Analytics
+media-amazon.com # Amazon Media Group
+aax.amazon-adsystem.com # Amazon Ad Exchange
+
+# Facebook/Meta Ads (muy persistentes)
+connect.facebook.net # Facebook Connect Ads
+pixel.facebook.com # Facebook Pixel Tracking
+analytics.facebook.com # Facebook Analytics
+graph.facebook.com # Facebook Graph API (parcial)
+
+# Criteo (retargeting muy agresivo)
+criteo.com # Retargeting principal
+criteo.net # Red de Criteo
+cas.criteo.com # Criteo Ad Server
+static.criteo.net # Recursos estáticos de Criteo
+
+# Anuncios en video
+#googlevideo.com # Anuncios en YouTube (cuidado: puede romper videos) - DESHABILITADO: ROMPE YOUTUBE
+#youtube.com # Solo descomenta si quieres bloquear YouTube completamente - DESHABILITADO: ROMPE YOUTUBE
+#ytimg.com # Thumbnails y recursos de YouTube (cuidado) - DESHABILITADO: ROMPE THUMBNAILS
+
+# Tracking adicional muy común
+hotjar.com # Grabación de sesiones
+fullstory.com # Análisis de comportamiento
+mouseflow.com # Tracking de mouse
+crazyegg.com # Heatmaps y tracking
+
+# CDNs que sirven anuncios
+jsdelivr.net # CDN usado para servir ads
+unpkg.com # CDN que puede servir scripts de ads
+cdnjs.cloudflare.com # Parcialmente usado para ads (cuidado)
+
+# Anuncios móviles específicos
+googleads.g.doubleclick.net # Google Mobile Ads
+pagead2.googlesyndication.com # Google Mobile AdSense
+mobileads.google.com # Google Mobile Ad Platform
+
+# Popups y notificaciones push
+onesignal.com # Notificaciones push agresivas
+pusher.com # Notificaciones push
+pushcrew.com # Push notifications
+cleverpush.com # Smart push notifications
+
+# === ADDITIONAL TRACKERS DETECTED FROM JSON ===
+# OnePlus avanzado
+open.oneplus.net # OnePlus Open Network
+analytics.oneplus.cn # OnePlus Analytics China
+
+# Microsoft/Windows Telemetry
+smartscreen-prod.microsoft.com # Microsoft SmartScreen
+watson.telemetry.microsoft.com # Microsoft Watson Telemetry
+sqm.telemetry.microsoft.com # Microsoft SQM Telemetry
+settings-sandbox.data.microsoft.com # Microsoft Settings Sandbox
+oca.telemetry.microsoft.com # Microsoft OCA Telemetry
+feedback.search.microsoft.com # Microsoft Search Feedback
+feedback.microsoft-hohm.com # Microsoft Hohm Feedback
+diagnostics.support.microsoft.com # Microsoft Diagnostics
+
+# Windows 10/11 Telemetry avanzada
+v10.events.data.microsoft.com # Windows 10 Events
+v20.events.data.microsoft.com # Windows 20 Events
+mobile.events.data.microsoft.com # Microsoft Mobile Events
+self.events.data.microsoft.com # Microsoft Self Events
+browser.events.data.microsoft.com # Microsoft Browser Events
+
+# Trackers adicionales detectados
+quantserve.com # Quantcast Tracking
+serving-sys.com # Serving System Ads
+adsystem.com # Generic Ad System
+
+# === ADDITIONAL DOMAINS FROM JSON (NOT BLOCKED) ===
+# Dominios que evaden el bloqueo actual y necesitan ser agregados
+
+# Google Analytics adicionales detectados  
+click.googleanalytics.com # Google Analytics Click Tracking (duplicado verificado)
+
+# Media.net faltantes
+adservetx.media.net # Media.net Ad Server TX (no estaba en lista)
+
+# Hotjar adicionales detectados
+events.hotjar.io # Hotjar Events IO (diferente del .com)
+
+# MouseFlow adicionales
+gtm.mouseflow.com # MouseFlow Google Tag Manager
+api.mouseflow.com # MouseFlow API (no estaba)
+
+# WordPress Stats
+stats.wp.com # WordPress.com Stats Plugin
+
+# Yahoo adicionales detectados
+analytics.yahoo.com # Yahoo Analytics Main
+partnerads.ysm.yahoo.com # Yahoo Partner Ads YSM
+udcm.yahoo.com # Yahoo UDCM
+adtech.yahooinc.com # Yahoo AdTech Inc
+
+# Yandex adicionales detectados  
+extmaps-api.yandex.net # Yandex External Maps API
+offerwall.yandex.net # Yandex Offerwall
+
+# OEM Tracking adicionales detectados
+data.mistat.xiaomi.com # Xiaomi MiStat Data
+adsfs.oppomobile.com # Oppo Ad File System
+nmetrics.samsung.com # Samsung N-Metrics
+metrics.icloud.com # Apple iCloud Metrics

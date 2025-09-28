@@ -1,0 +1,8 @@
+# Domain whitelist for Pi-hole
+# Format: domain [# optional comment]
+# Lines starting with # are comments and are ignored
+# Empty lines are also ignored
+
+# === SUPERCELL GAMES ===
+supercell.com # Supercell main site
+clashroyale.com # Official Clash Royale
